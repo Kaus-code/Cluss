@@ -1,143 +1,98 @@
-# 📚 Lectura — Your Personal Course Discovery & Study Planner
+# Cluss 🎓
 
-> **Find. Plan. Learn. Achieve.**  
-> Lectura is an AI-powered educational search and planning platform. Search any topic, discover curated YouTube playlists, and get a **personalized study plan** that helps you complete your learning journey faster, smarter, and stress-free.
+> **Stop Watching. Start Mastering.**
 
----
+![Status](https://img.shields.io/badge/Platform-Live-success?style=for-the-badge) ![AI](https://img.shields.io/badge/AI-Powered-blueviolet?style=for-the-badge) ![Price](https://img.shields.io/badge/Plan-Free_%26_Premium-orange?style=for-the-badge)
 
-## 👥 Contributors
-
-| ![Ayush's Avatar](https://avatars.githubusercontent.com/u/119419988?s=130&v=4) | ![Kaustubh's Avatar](https://avatars.githubusercontent.com/u/180457826?v=4) |
-|--------------------------------|--------------------------------|
-| **Ayush** — Turns coffee ☕ into brilliant code and wild ideas 💡 | **Kaustubh** — Crafts pixels 🎨 & logic 🧠 into magic 🚀 |
-| *"The brainstorm never ends"* 💭 | *"The code compiles… eventually"* 😄 |
+**Cluss** turns the chaos of YouTube tutorials into structured, achievable courses. We don't just show you videos; we build you a personalized schedule, give you an AI tutor, and help you track your journey from "Newbie" to "Master."
 
 ---
 
-## 🌟 Why Lectura?
+## 😫 The Problem
+You find a great 10-hour playlist on "Full Stack Development." You watch 3 videos, get distracted, lose your place, and never finish. You have passive knowledge, but no real understanding.
 
-Learning online can be overwhelming — thousands of videos, scattered resources, and no clear plan.  
-Lectura changes that by combining **intelligent course search**, **YouTube API integration**, and **AI-driven study planners** to create an **all-in-one learning hub**.
+## 🚀 The Cluss Solution
+We wrap a powerful learning environment around the best content on the web.
 
----
+### 1. 📅 Your Personal Study Planner
+Stop guessing if you'll finish in time. We offer two modes to fit your life:
+* **"I have a deadline!" (Exam Mode):** Tell us when your exam is. We calculate exactly how many videos you need to watch daily to finish on time. [cite_start]If it's impossible, we'll warn you! [cite: 42-47]
+* **"I have a busy life." (Flex Mode):** Tell us you have 1 hour on Tuesdays and 4 hours on Sundays. [cite_start]We generate a custom calendar that fits *your* free time. [cite: 39-41]
 
-## 🚀 Key Features
+### 2. 🤖 AI Teaching Assistant
+Stuck on a concept? Don't scroll through comments. Use your daily credits to:
+* **Deep Search:** Ask *"Where do they talk about For Loops?"* and jump straight to that second (e.g., 3:45). [cite: 55]
+* **Instant Notes:** Get a neat PDF summary of the entire video in seconds. [cite: 57]
+* **Quiz Yourself:** Generate practice questions to make sure you actually understood the lecture. [cite: 58]
 
-### 🔍 Smart Search
-- Search **any educational topic**.
-- YouTube API integration to fetch **relevant playlists & videos**.
-- Playlist cards with:
-  - ⏱ **Total Duration**  
-  - 📺 **Channel Name**  
-  - 📝 **Title & Thumbnail**  
-  - 🎯 **Average Video Length**  
-  - 👀 **Views & Upload Date**  
+### 3. 🤝 Infinite Context Study Rooms
+Create a "Room" with friends. Upload your class notes, PDFs, or code. [cite_start]Our AI reads *everything* (even massive files) so you can ask questions across all your documents and videos at once. [cite: 63]
 
-### 📅 AI-Powered Study Planner
-Two ways to build your learning plan:
-1. **Study-Time Based**  
-   - Enter how many days per week & hours per day you can study.
-   - Get estimated completion dates.
-2. **Deadline Based**  
-   - Set the target completion date.
-   - Get daily required study hours + **red alerts** if the schedule is unrealistic.
-
-### 📊 Dashboard & Tracking
-- Total watch time & streak tracker.
-- Course progress (completed, in-progress, planned).
-- Leaderboards to compare with peers.
-- Achievement badges for milestones.
-
-### 🧑‍🤝‍🧑 Community Learning
-- Discussion forums.
-- Peer progress comparison.
-- Group challenges.
-
-### 📂 Course Details Page
-- Full video list with duration.
-- Customizable planner form.
-- Related course recommendations.
+### 4. 🔥 Gamify Your Growth
+* [cite_start]**Heatmap:** Fill your calendar with green squares (just like GitHub) by studying every day. [cite: 75]
+* **Leaderboards:** Compete with friends for "Knowledge Points."
+* **Streaks:** Don't break the chain!
 
 ---
 
-## 📄 Pages & Modules
+## 💎 How It Works
 
-| Page               | Description |
-|--------------------|-------------|
-| **Login**          | Simple & secure authentication. |
-| **Home**           | Personalized welcome + intro to features. |
-| **Dashboard**      | Stats, progress, leaderboard, streaks. |
-| **Courses**        | View completed & ongoing courses, search for more. |
-| **Leaderboard**    | Track your position among other learners. |
-| **Profile**        | Customize learning preferences, view badges. |
-| **Course Details** | Syllabus, instructor info, reviews. |
-| **Resources**      | PDFs, articles, external links. |
-| **Notifications**  | Reminders, course deadlines, forum updates. |
-| **Community**      | Forums, Q&A, study groups. |
-| **Mentorship**     | Connect with mentors, book sessions. |
-| **Progress Reports** | Analytics & downloadable reports. |
-| **Certifications** | Earn & share certificates. |
-| **Support**        | FAQs, live chat, troubleshooting. |
-| **Blog**           | Learning tips, case studies. |
-| **Events**         | Webinars, workshops, archives. |
-| **Gamification**   | Points, challenges, rewards. |
+1.  **Search:** Type in what you want to learn (e.g., "Data Structures").
+2.  **Plan:** Choose a playlist and set your schedule.
+3.  **Learn:** Watch, chat with the AI, take notes, and pass quizzes to unlock the next module.
+4.  **Win:** Earn badges and track your progress on your dashboard.
 
 ---
 
-## 🛠 Tech Stack
+## 🪙 Free vs. Premium
 
-**Frontend:**  
-- HTML, CSS, JavaScript  
-- Tailwind CSS  
-- Bootstrap  
-- React.js  
-
-**Backend:**  
-- Node.js  
-- MongoDB  
-
-**Other:**  
-- YouTube Data API  
-- Hosting on [Your Hosting Site]  
+**Cluss operates on a Credit System.**
+* **Free Plan:** You get a fresh batch of credits *every single day*. Perfect for casual learners. (Credits reset daily)[cite_start]. [cite: 68]
+* **Premium Plan:** Get more daily credits, and they **roll over** if you don't use them. [cite_start]Plus, access to advanced AI models and unlimited Study Rooms. [cite: 68-69]
 
 ---
 
-## 📸 Example UI Inspiration
-- **Themes:** [EZ Dashboard + OpenAI Template](https://bubble.io/template/ez-dashboard-+-openai-1571845225384x467072888827019260)  
-- **Search Page Example:** [Bubble Dashboard Templates](https://bubble.io/templates/dashboard)
+## 👥 Meet the Team
+
+We are students building for students.
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/CodeVoyager3">
+        <img src="https://github.com/CodeVoyager3.png" width="120px;" alt="Amritesh Kumar Rai"/>
+        <br />
+        <b>Amritesh Kumar Rai</b>
+      </a>
+      <br />
+      Co-Founder
+    </td>
+    <td align="center">
+      <a href="https://github.com/Kaus-code"> <img src="https://github.com/Kaus-code.png" width="120px;" alt="Co-Founder 2"/>
+        <br />
+        <b>Kaustubh Sharma</b>
+      </a>
+      <br />
+      Co-Founder
+    </td>
+    <td align="center">
+      <a href="https://github.com/helo-ayush"> <img src="https://github.com/helo-ayush.png" width="120px;" alt="Co-Founder 3"/>
+        <br />
+        <b>Ayush Kumar</b>
+      </a>
+      <br />
+      Co-Founder
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 📈 Future Enhancements
-- AI course difficulty prediction.
-- Integration with more learning platforms (Coursera, Khan Academy, etc.).
-- Mobile app version.
-- Offline study mode.
+## 🌐 Join the Community
+
+Have a feature request? Found a bug? Just want to show off your study streak?
+
+[**Join our Discord**](#) | [**Follow on Twitter**](#) | [**Contribute on GitHub**](#)
 
 ---
-
-## 💡 How It Works
-1. **Search:** Enter your topic.  
-2. **Select:** Pick a playlist or video set.  
-3. **Plan:** Let our AI create your study schedule.  
-4. **Track:** Monitor progress & stay motivated.  
-5. **Achieve:** Complete your learning goals with ease.
-
----
-
-## 📜 License
-[MIT License](LICENSE)
-
----
-
-## 🤝 Contributing
-We welcome contributions!  
-1. Fork the repo.  
-2. Create a new branch (`feature/new-feature`).  
-3. Commit changes.  
-4. Push and create a Pull Request.
-
----
-
-## ❤️ Made for Lifelong Learners
-Lectura isn’t just a tool — it’s your **study buddy**. Whether you’re preparing for an exam, learning a new skill, or exploring a passion, we help you **stay on track, stay motivated, and succeed**.
+*Built with ❤️ for lifelong learners.*
