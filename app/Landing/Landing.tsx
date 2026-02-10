@@ -3,6 +3,9 @@ import HeroSection from '@/components/HeroSection'
 import Navbar from '@/components/Navbar'
 import React, { useState } from 'react'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import FallingBoxes from '@/components/FallingBoxes'
+import ServicesSection from '@/components/ServiceSection'
+import TestimonialSection from '@/components/TestimonialSection'
 
 const Landing = () => {
   const { scrollY } = useScroll();
@@ -20,7 +23,7 @@ const Landing = () => {
 
   return (
     <div className='bg-[#e5e9eb]'>
-      <motion.div 
+      <motion.div
         variants={{
           visible: { y: 0 },
           hidden: { y: "-100%" },
@@ -29,9 +32,12 @@ const Landing = () => {
         transition={{ duration: 0.55, ease: "easeInOut" }}
         className='fixed top-0 w-full bg-white rounded-b-2xl h-22 z-50'
       >
-        <Navbar/>
+        <Navbar />
       </motion.div>
-      <HeroSection/>
+      <HeroSection />
+      <ServicesSection/>
+      <FallingBoxes />
+      <TestimonialSection/>
     </div>
   )
 }
