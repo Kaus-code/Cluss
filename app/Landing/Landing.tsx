@@ -27,7 +27,7 @@ const Landing = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.55, ease: "easeInOut" }}
-        className='fixed top-0 w-full bg-white h-22 z-50'
+        className='fixed top-0 w-full bg-white rounded-b-2xl h-22 z-50'
       >
         <Navbar/>
       </motion.div>

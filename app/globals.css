@@ -252,3 +252,10 @@ body {
 .mask-t-from-50\% {
   --mask-t-from: 50%;
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background: black;
+}
