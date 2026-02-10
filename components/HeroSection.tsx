@@ -37,13 +37,13 @@ const HeroSection = () => {
                     borderRadius,
                     marginTop,
                 }}
-                className='flex flex-col justify-between items-center bg-white relative overflow-hidden'
+                className='flex flex-col xl:justify-evenly justify-between items-center bg-white relative overflow-hidden'
             >
                 <div className='w-full'>
                     <Navbar />
                 </div>
 
-                <div className='flex flex-col md:flex-row items-center justify-between gap-10 px-8 md:px-20 w-full flex-1'>
+                <div className='flex flex-col md:flex-row items-center justify-center gap-10 px-8 md:px-20 w-full flex-1 max-w-[2000px] mx-auto'>
 
                     {/* Left Side: Text Content */}
                     <div className='flex flex-col items-start mt-15 md:mt-0 gap-4 max-w-2xl z-10 md:pl-10'>
