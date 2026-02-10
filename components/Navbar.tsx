@@ -5,8 +5,9 @@ import Logo from '../public/Logo.png'
 const Navbar = () => {
   return (
     <div className='flex items-center justify-between p-4 text-black mx-5 md:mx-10 lg:mx-15 mt-1'>
-      <div className=''>
-        <Image src={Logo} alt="Logo" width={100} height={100} className="rounded-full cursor-pointer" />
+      <div className='flex gap-2 items-center cursor-pointer'>
+        <Image src={Logo} alt="Logo" width={35} height={35} className="rounded-full" />
+        <div className='text-2xl coiny text-[#666666]'>cluss</div>
       </div>
       <div className='hidden gap-8 lg:gap-13 md:flex'>
         <div className='relative cursor-pointer transition duration-300 group'>
@@ -24,7 +25,7 @@ const Navbar = () => {
         </div>
         <div className='relative cursor-pointer transition duration-300 group'>
           <div className="after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#bbbbbb] after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300">
-            Explore
+            Explore 
           </div>
         </div>
       </div>
