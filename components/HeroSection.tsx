@@ -1,9 +1,10 @@
 'use client'
-import React from 'react'
 import Navbar from './Navbar'
 import Image from 'next/image'
 import Marquee from './Marquee'
 import Logo from '../public/Logo.png'
+import Img1 from '../public/Img1.png'
+import Img2 from '../public/Img2.png'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
     FileText,
@@ -67,7 +68,7 @@ const HeroSection = () => {
                     {/* Right Side: 3D Tilted Card Component */}
                     <div
                         aria-hidden
-                        className="perspective-near hidden md:block min-w-[300px] md:min-w-[500px] scale-75 md:scale-95 py-12 md:translate-x-12">
+                        className="perspective-near hidden md:block min-w-75 md:min-w-125 scale-75 md:scale-95 py-12 md:translate-x-12">
 
                         {/* REMOVED: hover:rotate-0 hover:scale-105
                            KEPT: rotate-x-12 rotate-y-2 (Static Tilt)
@@ -163,7 +164,7 @@ const HeroSection = () => {
                         <div className='dot'></div>
                         <div>Who we are</div>
                     </div>
-                    <div className='bg-[#eef3f4] rounded-3xl p-6 relative w-full max-w-[420px]'>
+                    <div className='bg-[#eef3f4] rounded-3xl p-6 relative w-full max-w-105'>
                         <div className='rounded-2xl overflow-hidden relative'>
                             {/* Replace "dQw4w9WgXcQ" with your YouTube Video ID */}
                             <div className='aspect-video w-full rounded-xl overflow-hidden bg-[#f3f6f7]'>
@@ -188,7 +189,7 @@ const HeroSection = () => {
                 {/* Right: Product / Tools Content */}
                 <div className='w-full md:w-1/2 flex flex-col justify-center'>
                     <h2 className='text-[40px] font-semibold tracking-tight mb-6'>Learn in a most creative way possible</h2>
-                    <p className='text-[16px] text-[#222] leading-relaxed max-w-[680px] mb-6'>
+                    <p className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
                         Cluss provides an integrated toolkit for learning teams and creators. Instantly transcribe YouTube lectures, generate concise summaries, run group discussions, and turn lessons into quizzes and study notes — powered by AI to save time and boost retention.
                     </p>
 
@@ -201,14 +202,170 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-[90vw] flex flex-row rounded-4xl'>
-                <div className='flex items-center gap-2'>
+
+
+            {/* Card Breaker  */}
+
+            <div className='w-[90vw] flex flex-col md:flex-row rounded-4xl gap-2 justify-between items-start '>
+                <div className='px-2 md:px-0 flex items-center gap-2'>
                     <div className='dot'></div>
-                    <div className=''>Featured Works</div>
+                    <div className='text-sm md:text-xl font-medium'>Featured Works</div>
                 </div>
-                <div>
-                    We create a path for learning but not the way to do so
+                <div className='px-2 md:px-0 text-xl md:text-2xl lg:text-3xl md:w-1/2 font-semibold'>
+                    <div className='w-3/4'>
+                        We create a path for learning but you have to walk by yourself
+                    </div>
                 </div>
+            </div>
+
+
+            <div className='w-[90vw] rounded-4xl h-auto bg-white flex flex-col items-center'>
+
+                {/* Box 1 */}
+
+                <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
+                    {/* Left: Card */}
+                    <div className='w-full md:w-1/2 flex flex-col justify-between gap-4'>
+                    <div className='flex flex-col gap-3'>
+                        <div className='flex items-center gap-5 font-medium text-[18px]'>
+                            <div className='dot'></div>
+                            <div>Beginning Of the Era</div>
+                        </div>
+                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                            <div className='w-3/4'>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                            </div>
+                        </div>
+                    </div>
+
+                        <div className='flex gap-2'>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                        </div>
+                    </div>
+
+
+                    {/* Right: Product*/}
+                    <div className='w-full md:w-1/2 flex flex-col justify-start gap-3'>
+                        <Image src={Img1} alt='img1' className='w-full' />
+                    </div>
+                </div>
+                
+                
+
+                <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
+                    {/* Left: Card */}
+                    <div className='w-full hidden md:flex md:w-1/2 flex-col justify-start gap-3'>
+                        <Image src={Img2} alt='img2' className='w-full' />
+                    </div>
+
+
+                    {/* Right: Product*/}
+                    <div className='w-full px-5 md:w-1/2 flex flex-col justify-between gap-4'>
+                    <div className='flex flex-col gap-3'>
+                        <div className='flex items-center gap-5 font-medium text-[18px]'>
+                            <div className='dot'></div>
+                            <div>Beginning Of the Era</div>
+                        </div>
+                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                            <div className='w-3/4'>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                            </div>
+                        </div>
+                    </div>
+
+                        <div className='flex gap-2'>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                        </div>
+                    </div>
+
+                    {/* Img: Card on Mobile Screen*/}
+                    <div className='md:hidden w-full md:w-1/2 flex flex-col justify-start gap-3'>
+                        <Image src={Img2} alt='img2' className='w-full' />
+                    </div>
+                </div>
+
+
+                {/* Box 2 */}
+
+                <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
+                    {/* Left: Card */}
+                    <div className='w-full md:w-1/2 flex flex-col justify-between gap-4'>
+                    <div className='flex flex-col gap-3'>
+                        <div className='flex items-center gap-5 font-medium text-[18px]'>
+                            <div className='dot'></div>
+                            <div>Beginning Of the Era</div>
+                        </div>
+                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                            <div className='w-3/4'>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                            </div>
+                        </div>
+                    </div>
+
+                        <div className='flex gap-2'>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                        </div>
+                    </div>
+
+
+                    {/* Right: Product*/}
+                    <div className='w-full md:w-1/2 flex flex-col justify-start gap-3'>
+                        <Image src={Img1} alt='img1' className='w-full' />
+                    </div>
+                </div>
+                
+                <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
+                    {/* Left: Card */}
+                    <div className='w-full hidden md:flex md:w-1/2 flex-col justify-start gap-3'>
+                        <Image src={Img2} alt='img2' className='w-full' />
+                    </div>
+
+
+                    {/* Right: Product*/}
+                    <div className='w-full px-5 md:w-1/2 flex flex-col justify-between gap-4'>
+                    <div className='flex flex-col gap-3'>
+                        <div className='flex items-center gap-5 font-medium text-[18px]'>
+                            <div className='dot'></div>
+                            <div>Beginning Of the Era</div>
+                        </div>
+                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                            <div className='w-3/4'>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                            </div>
+                        </div>
+                    </div>
+
+                        <div className='flex gap-2'>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                        </div>
+                    </div>
+
+                    {/* Img: Card on Mobile Screen*/}
+                    <div className='md:hidden w-full md:w-1/2 flex flex-col justify-start gap-3'>
+                        <Image src={Img2} alt='img2' className='w-full' />
+                    </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className='group relative cursor-pointer px-6 py-3 mb-15 bg-[#e5e9eb] flex gap-2 rounded-full overflow-hidden mt-4'>
+                    <div className='absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out'></div>
+                    <div className='relative z-10 flex gap-2 group-hover:text-white transition-colors duration-500'>
+                        <div>All Projects</div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
