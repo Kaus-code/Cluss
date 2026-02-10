@@ -134,7 +134,7 @@ const CreativeLabFallingSection = () => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full h-[800px] bg-[#e8eaed] overflow-hidden flex flex-col items-center pt-24 font-sans"
+            className="relative w-full h-[800px] bg-[#e5e9eb] overflow-hidden flex flex-col items-center pt-24 font-sans"
         >
             {/* Header Content */}
             <div className="text-center z-10 px-4 pointer-events-none select-none">
@@ -163,7 +163,7 @@ const CreativeLabFallingSection = () => {
                     <div
                         key={item.id}
                         ref={(el) => { itemsRefs.current[i] = el; }}
-                        className={`absolute bg-white rounded-2xl flex items-center justify-center overflow-hidden 
+                        className={`absolute bg-white rounded-2xl flex items-center justify-center overflow-hidden select-none
                        border-[14px] border-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)]
                        ${hasFallen ? 'cursor-grab active:cursor-grabbing' : 'transition-transform duration-300'}
                       `}
@@ -181,8 +181,10 @@ const CreativeLabFallingSection = () => {
                         <img
                             src={item.src}
                             alt="Creative work"
-                            className="w-full h-full object-cover pointer-events-none"
+                            className="w-full h-full object-cover pointer-events-none select-none"
                             draggable={false}
+                            style={{ userSelect: 'none', WebkitUserDrag: 'none' } as React.CSSProperties}
+                            onDragStart={(e) => e.preventDefault()}
                         />
                     </div>
                 ))}

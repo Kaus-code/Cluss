@@ -1,6 +1,6 @@
 'use client';
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
+import { motion, useMotionValue, useSpring, PanInfo } from 'framer-motion';
 import { Linkedin, ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
@@ -42,17 +42,69 @@ const testimonials = [
     }
 ];
 
-const TestimonialSection = () => {
-    const targetRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-    });
+const CARD_WIDTH = 450;
+const GAP = 32; // gap-8 = 2rem = 32px
+const STEP = CARD_WIDTH + GAP;
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+const TestimonialSection = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [maxIndex, setMaxIndex] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const rawX = useMotionValue(0);
+    const x = useSpring(rawX, { stiffness: 300, damping: 40 });
+
+    // Calculate max scrollable index based on container width
+    useEffect(() => {
+        const updateMax = () => {
+            if (!containerRef.current) return;
+            const containerWidth = containerRef.current.offsetWidth;
+            const totalWidth = testimonials.length * STEP - GAP;
+            const maxScroll = totalWidth - containerWidth;
+            const maxIdx = Math.max(0, Math.ceil(maxScroll / STEP));
+            setMaxIndex(maxIdx);
+        };
+        updateMax();
+        window.addEventListener('resize', updateMax);
+        return () => window.removeEventListener('resize', updateMax);
+    }, []);
+
+    const goTo = useCallback((index: number) => {
+        const clamped = Math.max(0, Math.min(index, maxIndex));
+        setCurrentIndex(clamped);
+        rawX.set(-clamped * STEP);
+    }, [maxIndex, rawX]);
+
+    const handlePrev = () => goTo(currentIndex - 1);
+    const handleNext = () => goTo(currentIndex + 1);
+
+    // Drag handling
+    const dragStartX = useRef(0);
+
+    const handleDragStart = () => {
+        dragStartX.current = rawX.get();
+    };
+
+    const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+        const offset = info.offset.x;
+        const velocity = info.velocity.x;
+
+        // Determine direction based on drag distance + velocity
+        if (offset < -50 || velocity < -300) {
+            goTo(currentIndex + 1);
+        } else if (offset > 50 || velocity > 300) {
+            goTo(currentIndex - 1);
+        } else {
+            // Snap back to current position
+            goTo(currentIndex);
+        }
+    };
+
+    const progress = maxIndex > 0 ? currentIndex / maxIndex : 0;
 
     return (
-        <section ref={targetRef} className="relative h-[300vh]  mt-10">
-            <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+        <section className="relative mt-10 py-20">
+            <div className="flex flex-col justify-center overflow-hidden">
 
                 {/* Header */}
                 <div className="px-6 md:px-12 lg:px-24 mb-12">
@@ -63,15 +115,26 @@ const TestimonialSection = () => {
                 </div>
 
                 {/* Cards Container */}
-                <div className="flex items-center px-6 md:px-12 lg:px-24">
-                    <motion.div style={{ x }} className="flex gap-8">
+                <div
+                    ref={containerRef}
+                    className="flex items-center px-6 md:px-12 lg:px-24 overflow-hidden cursor-grab active:cursor-grabbing"
+                >
+                    <motion.div
+                        style={{ x }}
+                        drag="x"
+                        dragConstraints={{ left: -maxIndex * STEP, right: 0 }}
+                        dragElastic={0.15}
+                        onDragStart={handleDragStart}
+                        onDragEnd={handleDragEnd}
+                        className="flex gap-8"
+                    >
                         {testimonials.map((item) => (
                             <div
                                 key={item.id}
-                                className="flex-shrink-0 w-[450px] bg-white rounded-[40px] p-10 shadow-sm border border-gray-100 flex flex-col justify-between h-[450px]"
+                                className="flex-shrink-0 w-[450px] bg-white rounded-[40px] p-10 shadow-sm border border-gray-100 flex flex-col justify-between h-[450px] select-none"
                             >
-                                <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium">
-                                    "{item.text}"
+                                <p className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium pointer-events-none">
+                                    &quot;{item.text}&quot;
                                 </p>
 
                                 <div className="flex items-center justify-between mt-8">
@@ -81,7 +144,8 @@ const TestimonialSection = () => {
                                                 src={item.avatar}
                                                 alt={item.name}
                                                 fill
-                                                className="object-cover"
+                                                className="object-cover pointer-events-none"
+                                                draggable={false}
                                             />
                                         </div>
                                         <div>
@@ -104,17 +168,26 @@ const TestimonialSection = () => {
                     {/* Progress Bar */}
                     <div className="flex-1 max-w-2xl h-[2px] bg-gray-200 relative">
                         <motion.div
-                            style={{ scaleX: scrollYProgress }}
+                            animate={{ scaleX: progress }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
                             className="absolute top-0 left-0 h-full bg-black origin-left w-full"
                         />
                     </div>
 
                     {/* Navigation Buttons */}
                     <div className="flex gap-4">
-                        <button className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-100 transition-all shadow-sm">
+                        <button
+                            onClick={handlePrev}
+                            disabled={currentIndex === 0}
+                            className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-100 transition-all shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
+                        >
                             <ArrowLeft className="w-5 h-5 text-gray-900" />
                         </button>
-                        <button className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-100 transition-all shadow-sm">
+                        <button
+                            onClick={handleNext}
+                            disabled={currentIndex >= maxIndex}
+                            className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-100 transition-all shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
+                        >
                             <ArrowRight className="w-5 h-5 text-gray-900" />
                         </button>
                     </div>
