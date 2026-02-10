@@ -4,9 +4,9 @@ import Logo from '../public/Logo.png'
 
 const Navbar = () => {
   return (
-    <div className='flex items-center justify-between p-4 text-black mx-5 md:mx-10 lg:mx-15 mt-1'>
+    <div className='flex items-center justify-between p-4 text-black md:mx-10 lg:mx-15 mt-1'>
       <div className='flex gap-2 items-center cursor-pointer'>
-        <Image src={Logo} alt="Logo" width={35} height={35} className="rounded-full" />
+        <Image src={Logo} alt="Logo" className="rounded-full w-9" />
         <div className='text-2xl coiny text-[#666666]'>cluss</div>
       </div>
       <div className='hidden gap-8 lg:gap-13 md:flex'>
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='flex lg:hidden items-center gap-5'>
-        <div className='group relative cursor-pointer px-5 py-3 bg-[#e5e9eb] flex gap-2 rounded-full overflow-hidden'>
+        <div className='group relative cursor-pointer px-3 py-2 md:px-5 md:py-3 bg-[#e5e9eb] flex gap-2 rounded-full overflow-hidden'>
           <div className='absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out'></div>
           <div className='relative z-10 flex gap-2 group-hover:text-white transition-colors duration-500'>
             <div>Let's Start</div>
@@ -41,7 +41,7 @@ const Navbar = () => {
       </div>
       <div className='hidden lg:flex items-center gap-5'>
         <div className='hover:bg-[#e5e9eb] rounded-full cursor-pointer transition duration-700 hover:translate-x-1 hover:translate-y-[-2px]'><Image src="https://cdn.prod.website-files.com/673786754d248974527e65b5/673a401dc37634f53f2462ea_Button%20menu.svg" alt="Logo" width={40} height={40} className="rounded-full" /></div>
-        <div className='group relative cursor-pointer px-5 py-3 bg-[#e5e9eb] flex gap-2 rounded-full overflow-hidden'>
+        <div className='group relative cursor-pointer px-3 py-2 md:px-5 md:py-3 bg-[#e5e9eb] flex gap-2 rounded-full overflow-hidden'>
           <div className='absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out'></div>
           <div className='relative z-10 flex gap-2 group-hover:text-white transition-colors duration-500'>
             <div>Let's Start</div>

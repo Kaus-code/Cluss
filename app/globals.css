@@ -53,3 +53,10 @@ body {
   color: var(--foreground);
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
+.dot{
+  width: 8px;
+  height: 8px;
+  border-radius:100px;
+  background: black;
+}
