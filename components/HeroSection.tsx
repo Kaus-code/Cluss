@@ -4,7 +4,6 @@ import Navbar from './Navbar'
 import Image from 'next/image'
 import Marquee from './Marquee'
 import Logo from '../public/Logo.png'
-import Showreel from '../public/Showreel.jpg'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 const HeroSection = () => {
@@ -103,10 +102,15 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-[90vw] rounded-4xl h-100 bg-white'>
-                adsd
+            <div className='w-[90vw] flex flex-row rounded-4xl'>
+                <div className='flex items-center gap-2'>
+                    <div className='dot'></div>
+                    <div className=''>Featured Works</div>
+                </div>
+                <div>
+                    We create a path for learning but not the way to do so
+                </div>
             </div>
-
         </div>
     )
 }
