@@ -20,12 +20,12 @@ const Navbar = () => {
           <Image src='https://cdn.prod.website-files.com/673786754d248974527e65b5/673a2c5929486b4e031f7c94_dropdown-arrow.svg' alt="Logo" width={7} height={7} className="rounded-full group-hover:scale-y-[-1] group-hover:invert-75 transition-transform duration-300 cursor-pointer" />
         </div>
         <div className='group cursor-pointer flex items-center gap-1.5 hover:text-[#bbbbbb] transition duration-300'>
-          <div>Contact Us</div>
+          <div>Pricing</div>
           <Image src='https://cdn.prod.website-files.com/673786754d248974527e65b5/673a2c5929486b4e031f7c94_dropdown-arrow.svg' alt="Logo" width={7} height={7} className="rounded-full group-hover:scale-y-[-1] group-hover:invert-75 transition-transform duration-300 cursor-pointer" />
         </div>
         <div className='relative cursor-pointer transition duration-300 group'>
           <div className="after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#bbbbbb] after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300">
-            Explore 
+            Explore
           </div>
         </div>
       </div>

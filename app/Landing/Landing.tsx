@@ -6,6 +6,8 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import FallingBoxes from '@/components/FallingBoxes'
 import ServicesSection from '@/components/ServiceSection'
 import TestimonialSection from '@/components/TestimonialSection'
+import Pricing from '@/components/Pricing'
+
 
 const Landing = () => {
   const { scrollY } = useScroll();
@@ -35,9 +37,10 @@ const Landing = () => {
         <Navbar />
       </motion.div>
       <HeroSection />
-      <ServicesSection/>
+      <ServicesSection />
       <FallingBoxes />
-      <TestimonialSection/>
+      <TestimonialSection />
+      <Pricing />
     </div>
   )
 }
