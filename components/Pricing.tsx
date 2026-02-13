@@ -6,7 +6,7 @@ const Pricing = () => {
     const [isAnnual, setIsAnnual] = useState(true);
 
     return (
-        <div className='w-full flex justify-center pb-20'>
+        <div id="pricing" className='w-full flex justify-center pb-20'>
             <div className='w-[90vw]  bg-white rounded-4xl py-16 flex flex-col items-center gap-12 overflow-hidden'>
 
                 {/* Header */}

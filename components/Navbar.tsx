@@ -1,8 +1,18 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Logo from '../public/Logo.png'
+import Link from 'next/link'
 
 const Navbar = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='flex items-center justify-between p-4 text-black md:mx-10 lg:mx-15 mt-1'>
       <div className='flex gap-2 items-center cursor-pointer'>
@@ -11,20 +21,20 @@ const Navbar = () => {
       </div>
       <div className='hidden gap-8 lg:gap-13 md:flex'>
         <div className='relative cursor-pointer transition duration-300 group'>
-          <div className="after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#bbbbbb] after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300">
+          <a href="#home" onClick={(e) => handleScroll(e, "home")} className="after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-[#bbbbbb] after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300">
             Home
-          </div>
+          </a>
         </div>
-        <div className='group cursor-pointer flex items-center gap-1.5 hover:text-[#bbbbbb] transition duration-300'>
+        <a href="#about" onClick={(e) => handleScroll(e, "about")} className='group cursor-pointer flex items-center gap-1.5 hover:text-[#bbbbbb] transition duration-300'>
           <div>About</div>
           <Image src='https://cdn.prod.website-files.com/673786754d248974527e65b5/673a2c5929486b4e031f7c94_dropdown-arrow.svg' alt="Logo" width={7} height={7} className="rounded-full group-hover:scale-y-[-1] group-hover:invert-75 transition-transform duration-300 cursor-pointer" />
-        </div>
-        <div className='group cursor-pointer flex items-center gap-1.5 hover:text-[#bbbbbb] transition duration-300'>
+        </a>
+        <a href="#pricing" onClick={(e) => handleScroll(e, "pricing")} className='group cursor-pointer flex items-center gap-1.5 hover:text-[#bbbbbb] transition duration-300'>
           <div>Pricing</div>
           <Image src='https://cdn.prod.website-files.com/673786754d248974527e65b5/673a2c5929486b4e031f7c94_dropdown-arrow.svg' alt="Logo" width={7} height={7} className="rounded-full group-hover:scale-y-[-1] group-hover:invert-75 transition-transform duration-300 cursor-pointer" />
-        </div>
+        </a>
         <div className='relative cursor-pointer transition duration-300 group'>
-          <div className="after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#bbbbbb] after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300">
+          <div className="after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-[#bbbbbb] after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300">
             Explore
           </div>
         </div>

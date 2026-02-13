@@ -28,7 +28,7 @@ const HeroSection = () => {
     const marginTop = useTransform(scrollY, [0, 200], ["0px", "12px"]);
 
     return (
-        <div className='flex items-center flex-col gap-20'>
+        <div id="home" className='flex items-center flex-col gap-20'>
 
             {/* Main Hero Container */}
             <motion.div
@@ -223,21 +223,21 @@ const HeroSection = () => {
 
                 {/* Box 1 */}
 
-                <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
+                <div id='about' className='flex flex-col md:flex-row  px-18 py-15 gap-8'>
                     {/* Left: Card */}
                     <div className='w-full md:w-1/2 flex flex-col justify-between gap-4'>
-                    <div className='flex flex-col gap-3'>
-                        <div className='flex items-center gap-5 font-medium text-[18px]'>
-                            <div className='dot'></div>
-                            <div>Beginning Of the Era</div>
-                        </div>
-                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
-                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
-                            <div className='w-3/4'>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                        <div className='flex flex-col gap-3'>
+                            <div className='flex items-center gap-5 font-medium text-[18px]'>
+                                <div className='dot'></div>
+                                <div>Beginning Of the Era</div>
+                            </div>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                                <div className='w-3/4'>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                         <div className='flex gap-2'>
                             <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
@@ -252,8 +252,8 @@ const HeroSection = () => {
                         <Image src={Img1} alt='img1' className='w-full' />
                     </div>
                 </div>
-                
-                
+
+
 
                 <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
                     {/* Left: Card */}
@@ -264,18 +264,18 @@ const HeroSection = () => {
 
                     {/* Right: Product*/}
                     <div className='w-full px-5 md:w-1/2 flex flex-col justify-between gap-4'>
-                    <div className='flex flex-col gap-3'>
-                        <div className='flex items-center gap-5 font-medium text-[18px]'>
-                            <div className='dot'></div>
-                            <div>Beginning Of the Era</div>
-                        </div>
-                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
-                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
-                            <div className='w-3/4'>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                        <div className='flex flex-col gap-3'>
+                            <div className='flex items-center gap-5 font-medium text-[18px]'>
+                                <div className='dot'></div>
+                                <div>Beginning Of the Era</div>
+                            </div>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                                <div className='w-3/4'>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                         <div className='flex gap-2'>
                             <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
@@ -296,18 +296,18 @@ const HeroSection = () => {
                 <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
                     {/* Left: Card */}
                     <div className='w-full md:w-1/2 flex flex-col justify-between gap-4'>
-                    <div className='flex flex-col gap-3'>
-                        <div className='flex items-center gap-5 font-medium text-[18px]'>
-                            <div className='dot'></div>
-                            <div>Beginning Of the Era</div>
-                        </div>
-                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
-                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
-                            <div className='w-3/4'>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                        <div className='flex flex-col gap-3'>
+                            <div className='flex items-center gap-5 font-medium text-[18px]'>
+                                <div className='dot'></div>
+                                <div>Beginning Of the Era</div>
+                            </div>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                                <div className='w-3/4'>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                         <div className='flex gap-2'>
                             <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
@@ -322,7 +322,7 @@ const HeroSection = () => {
                         <Image src={Img1} alt='img1' className='w-full' />
                     </div>
                 </div>
-                
+
                 <div className='flex flex-col md:flex-row px-18 py-15 gap-8'>
                     {/* Left: Card */}
                     <div className='w-full hidden md:flex md:w-1/2 flex-col justify-start gap-3'>
@@ -332,18 +332,18 @@ const HeroSection = () => {
 
                     {/* Right: Product*/}
                     <div className='w-full px-5 md:w-1/2 flex flex-col justify-between gap-4'>
-                    <div className='flex flex-col gap-3'>
-                        <div className='flex items-center gap-5 font-medium text-[18px]'>
-                            <div className='dot'></div>
-                            <div>Beginning Of the Era</div>
-                        </div>
-                        <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
-                        <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
-                            <div className='w-3/4'>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                        <div className='flex flex-col gap-3'>
+                            <div className='flex items-center gap-5 font-medium text-[18px]'>
+                                <div className='dot'></div>
+                                <div>Beginning Of the Era</div>
+                            </div>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
+                                <div className='w-3/4'>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                         <div className='flex gap-2'>
                             <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
