@@ -7,6 +7,7 @@ import FallingBoxes from '@/components/FallingBoxes'
 import ServicesSection from '@/components/ServiceSection'
 import TestimonialSection from '@/components/TestimonialSection'
 import Pricing from '@/components/Pricing'
+import Footer from '@/components/Footer'
 
 
 const Landing = () => {
@@ -41,6 +42,7 @@ const Landing = () => {
       <FallingBoxes />
       <TestimonialSection />
       <Pricing />
+      <Footer />
     </div>
   )
 }
