@@ -180,7 +180,7 @@ const CreativeLabFallingSection = () => {
                     >
                         <img
                             src={item.src}
-                            alt="Creative work"
+                            alt="Educational snippet"
                             className="w-full h-full object-cover pointer-events-none select-none"
                             draggable={false}
                             style={{ userSelect: 'none', WebkitUserDrag: 'none' } as React.CSSProperties}

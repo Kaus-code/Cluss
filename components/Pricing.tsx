@@ -15,7 +15,7 @@ const Pricing = () => {
                         Plans and Pricing
                     </h2>
                     <p className='text-[18px] text-muted-foreground max-w-lg'>
-                        Receive unlimited credits when you pay yearly, and save on your plan.
+                        Start for free with daily credits, or upgrade for premium features and credit roll-over.
                     </p>
 
                     {/* Toggle */}
@@ -45,18 +45,18 @@ const Pricing = () => {
                             <h3 className='text-2xl font-medium mb-4'>Free</h3>
                             <div className='mb-6 flex flex-col'>
                                 <span className='text-[45px] font-medium leading-tight'>$0</span>
-                                <p className='text-sm text-muted-foreground'>Per user/month, billed annually</p>
+                                <p className='text-sm text-muted-foreground'>Perfect for casual learners</p>
                             </div>
 
                             <div className='space-y-4 mb-4'>
-                                <p className='font-medium text-black'>For your hobby projects</p>
+                                <p className='font-medium text-black'>Daily Learning Essential</p>
                                 <ul className='space-y-3'>
                                     {[
-                                        'Free e-mail alerts',
-                                        '3-minute checks',
-                                        'Automatic data enrichment',
-                                        '10 monitors',
-                                        'Up to 3 seats'
+                                        'Daily Credit Refresh',
+                                        'AI Course Search',
+                                        'Basic Study Planner',
+                                        'YT Q&A Access',
+                                        'Public Study Rooms'
                                     ].map((feature, i) => (
                                         <li key={i} className='flex items-center gap-3 text-sm text-[#444]'>
                                             <div className='bg-[#f4f4f5] min-w-5 h-5 flex items-center justify-center rounded text-black'>
@@ -87,19 +87,19 @@ const Pricing = () => {
                                 </span>
                             </div>
                             <div className='mb-6 flex flex-col'>
-                                <span className='text-[45px] font-medium leading-tight'>$85</span>
-                                <p className='text-sm text-muted-foreground'>Per user/month, billed annually</p>
+                                <span className='text-[45px] font-medium leading-tight'>$19</span>
+                                <p className='text-sm text-muted-foreground'>Roll-over credits included</p>
                             </div>
 
                             <div className='space-y-4 mb-4'>
-                                <p className='font-medium text-black'>Great for small businesses</p>
+                                <p className='font-medium text-black'>For serious students</p>
                                 <ul className='space-y-3'>
                                     {[
-                                        'Unlimited phone calls',
-                                        '30 second checks',
-                                        'Single-user account',
-                                        '20 monitors',
-                                        'Up to 6 seats'
+                                        'Credit Roll-over',
+                                        'Advanced AI Models',
+                                        'Priority Q&A',
+                                        'Private Study Rooms',
+                                        'Unlimited Document OCR'
                                     ].map((feature, i) => (
                                         <li key={i} className='flex items-center gap-3 text-sm text-[#444]'>
                                             <div className='bg-[#f4f4f5] min-w-5 h-5 flex items-center justify-center rounded text-black'>

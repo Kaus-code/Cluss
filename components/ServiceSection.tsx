@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const services = [
-    { id: '01', name: 'Website Design' },
-    { id: '02', name: 'Branding' },
-    { id: '03', name: 'UX/UI' },
-    { id: '04', name: 'Motion Design' },
-    { id: '05', name: 'SEO' },
+    { id: '01', name: 'Smart Course Search' },
+    { id: '02', name: 'Personalized Study Planner' },
+    { id: '03', name: 'AI Teaching Assistant' },
+    { id: '04', name: 'Knowledge Checkpoints' },
+    { id: '05', name: 'Progress & Gamification' },
 ];
 
 const ServicesSection = () => {

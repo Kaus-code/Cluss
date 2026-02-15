@@ -49,10 +49,10 @@ const HeroSection = () => {
                     {/* Left Side: Text Content */}
                     <div className='flex flex-col items-start mt-15 md:mt-0 gap-4 max-w-2xl z-10 md:pl-10'>
                         <div className='text-[40px] md:text-[70px] font-medium text-left leading-[1.1]'>
-                            Your trusted learning Partner
+                            Stop Watching.<br />Start Mastering.
                         </div>
                         <div className='text-[18px] text-muted-foreground text-left max-w-lg'>
-                            We teach the world in the most unique and creative learning way.
+                            Cluss turns the chaos of YouTube tutorials into structured, achievable courses with AI-powered study plans and personalized schedules.
                         </div>
 
                         {/* CTA Button */}
@@ -60,7 +60,7 @@ const HeroSection = () => {
                             <div className='absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out'></div>
                             <div className='relative z-10 flex gap-2 group-hover:text-white transition-colors duration-500'>
                                 <div>Get Started</div>
-                                <div className='group-hover:-rotate-45 transition duration-500 text-xl'>👋</div>
+                                <div className='group-hover:-rotate-45 transition duration-500 text-xl'>🎓</div>
                             </div>
                         </div>
                     </div>
@@ -78,44 +78,43 @@ const HeroSection = () => {
                             {/* Floating Menu Card */}
                             <div className="bg-card ring-border shadow-foreground/10 bottom-20 absolute left-4 min-w-60 rounded-2xl p-1 shadow-xl ring-1 dark:shadow-black/25">
 
-                                {/* Feature 1: Upload */}
-                                {/* ADDED BACK: hover:bg-muted cursor-pointer */}
+                                {/* Feature 1: Study Planner */}
                                 <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
-                                    <FileText className="text-blue-500" />
-                                    <span>Upload PDFs & Notes</span>
+                                    <Calendar className="text-green-500" />
+                                    <span>AI Study Planner</span>
                                 </div>
 
                                 {/* Separator */}
                                 <span className="bg-size-[6px_1px] mx-3 my-0.5 block h-px bg-[linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-bottom bg-repeat-x opacity-30 dark:opacity-15" />
 
-                                {/* Feature 2: Planner */}
+                                {/* Feature 2: Q&A */}
                                 <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
-                                    <Calendar className="text-green-500" />
-                                    <span>Generate Study Plan</span>
+                                    <FileText className="text-blue-500" />
+                                    <span>YouTube Q&A Chat</span>
                                 </div>
 
-                                {/* Feature 3: AI Tutor */}
-                                <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
-                                    <Brain className="text-purple-500" />
-                                    <span>Ask AI Tutor</span>
-                                </div>
-
-                                {/* Feature 4: Deep Search */}
+                                {/* Feature 3: Deep Search */}
                                 <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
                                     <Search className="text-orange-500" />
-                                    <span>Deep Search Video</span>
+                                    <span>Deep Topic Search</span>
                                 </div>
 
-                                {/* Feature 5: Summarizer */}
+                                {/* Feature 4: Summarizer */}
                                 <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
                                     <Video className="text-red-500" />
-                                    <span>Summarize Playlist</span>
+                                    <span>Instant PDF Notes</span>
+                                </div>
+
+                                {/* Feature 5: Quiz */}
+                                <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
+                                    <Brain className="text-purple-500" />
+                                    <span>AI Quiz Generator</span>
                                 </div>
 
                                 {/* Feature 6: Study Room */}
                                 <div className="hover:bg-muted flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors duration-200 [&>svg]:size-4 [&>svg]:opacity-65">
                                     <Users className="text-yellow-500" />
-                                    <span>Join Study Room</span>
+                                    <span>RAG Study Rooms</span>
                                 </div>
                             </div>
 
@@ -125,7 +124,7 @@ const HeroSection = () => {
                                     <div className="bg-muted flex size-9 items-center justify-center rounded-full hover:bg-gray-200 cursor-pointer transition-colors *:size-4">
                                         <Plus />
                                     </div>
-                                    <div className="text-muted-foreground text-sm font-medium">I want to master Quantum Physics...</div>
+                                    <div className="text-muted-foreground text-sm font-medium">Where do they teach about For Loops?</div>
                                 </div>
                                 <div className="flex items-center gap-0.5">
                                     <div className="flex size-9 items-center justify-center rounded-full hover:bg-muted cursor-pointer transition-colors *:size-4">
@@ -188,7 +187,7 @@ const HeroSection = () => {
 
                 {/* Right: Product / Tools Content */}
                 <div className='w-full md:w-1/2 flex flex-col justify-center'>
-                    <h2 className='text-[40px] font-semibold tracking-tight mb-6'>Learn in a most creative way possible</h2>
+                    <h2 className='text-[40px] font-semibold tracking-tight mb-6'>Turn Content into Knowledge</h2>
                     <p className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
                         Cluss provides an integrated toolkit for learning teams and creators. Instantly transcribe YouTube lectures, generate concise summaries, run group discussions, and turn lessons into quizzes and study notes — powered by AI to save time and boost retention.
                     </p>
