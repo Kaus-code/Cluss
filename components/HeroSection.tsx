@@ -228,20 +228,20 @@ const HeroSection = () => {
                         <div className='flex flex-col gap-3'>
                             <div className='flex items-center gap-5 font-medium text-[18px]'>
                                 <div className='dot'></div>
-                                <div>Beginning Of the Era</div>
+                                <div>Organize your time</div>
                             </div>
-                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Study Planner</h2>
                             <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
                                 <div className='w-3/4'>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                    Stop guessing how much time you need. Tell us your deadline or your daily availability, and our intelligent algorithm builds a day-by-day roadmap. Switch between Exam Mode for high-intensity cramming or Flex Mode to balance learning with your busy lifestyle.
                                 </div>
                             </div>
                         </div>
 
                         <div className='flex gap-2'>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Exam Mode</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Flex Mode</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Scheduling</div>
                         </div>
                     </div>
 
@@ -266,20 +266,20 @@ const HeroSection = () => {
                         <div className='flex flex-col gap-3'>
                             <div className='flex items-center gap-5 font-medium text-[18px]'>
                                 <div className='dot'></div>
-                                <div>Beginning Of the Era</div>
+                                <div>Your personal tutor</div>
                             </div>
-                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>AI Assistant</h2>
                             <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
                                 <div className='w-3/4'>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                    Interact with your courses like never before. Navigate long tutorials instantly using Deep Search, get comprehensive PDF notes generated from any video, and challenge yourself with AI-powered quizzes that adapt to your knowledge gaps.
                                 </div>
                             </div>
                         </div>
 
                         <div className='flex gap-2'>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Q&A</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Summaries</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Quizzes</div>
                         </div>
                     </div>
 
@@ -298,20 +298,20 @@ const HeroSection = () => {
                         <div className='flex flex-col gap-3'>
                             <div className='flex items-center gap-5 font-medium text-[18px]'>
                                 <div className='dot'></div>
-                                <div>Beginning Of the Era</div>
+                                <div>Find what matters</div>
                             </div>
-                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Smart Discovery</h2>
                             <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
                                 <div className='w-3/4'>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                    Stop wasting hours on subpar tutorials. Our Smart Discovery engine vets thousands of YouTube playlists, analyzing metadata and transcript quality to recommend courses that are educationally sound and structured.
                                 </div>
                             </div>
                         </div>
 
                         <div className='flex gap-2'>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>YouTube API</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Insights</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Curation</div>
                         </div>
                     </div>
 
@@ -334,20 +334,20 @@ const HeroSection = () => {
                         <div className='flex flex-col gap-3'>
                             <div className='flex items-center gap-5 font-medium text-[18px]'>
                                 <div className='dot'></div>
-                                <div>Beginning Of the Era</div>
+                                <div>Track your growth</div>
                             </div>
-                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Journey</h2>
+                            <h2 className='text-[35px] font-medium tracking-tight mb-6 underline'>Gamification</h2>
                             <div className='text-[16px] text-[#222] leading-relaxed max-w-170 mb-6'>
                                 <div className='w-3/4'>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates alias consequatur reprehenderit quae, distinctio nobis eum! Libero officia atque ipsum commodi quis in tempore! Sapiente voluptatum minus nihil adipisci voluptates.
+                                    Consistency is the key to mastery. Track your learning streaks with GitHub-style contribution heatmaps, climb leaderboards, and turn your educational journey into a rewarding game you'll love to win.
                                 </div>
                             </div>
                         </div>
 
                         <div className='flex gap-2'>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Branding</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Web Design</div>
-                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Webflow Dev</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Heatmaps</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Badges</div>
+                            <div className='bg-[#fafafa] text-sm px-5 py-2 border border-[#d7d7d7] rounded-sm cursor-pointer hover:border-[#a4a4a4] transition-all duration-300'>Leaderboard</div>
                         </div>
                     </div>
 
