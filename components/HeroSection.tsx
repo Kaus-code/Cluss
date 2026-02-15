@@ -16,6 +16,7 @@ import {
     Mic2,
     AudioLines
 } from 'lucide-react'
+import InteractiveBackground from './ui/InteractiveBackground'
 
 const HeroSection = () => {
     const { scrollY } = useScroll();
@@ -39,6 +40,9 @@ const HeroSection = () => {
                 }}
                 className='flex flex-col xl:justify-evenly justify-between items-center bg-white relative overflow-hidden'
             >
+              <InteractiveBackground>
+                <div className='flex flex-col xl:justify-evenly justify-between items-center w-full h-full relative'>
+                
                 <div className='w-full h-22 invisible lg:block'></div>
 
                 <div className='flex flex-col md:flex-row items-center justify-center gap-10 px-8 md:px-20 w-full flex-1 max-w-[2000px] mx-auto'>
@@ -150,10 +154,14 @@ const HeroSection = () => {
                 <div className='left-0 w-full'>
                     <Marquee />
                 </div>
+                </div>
+              </InteractiveBackground>
             </motion.div>
 
             {/* Who We Are Section with Showreel */}
-            <div className='w-[90vw] rounded-4xl h-auto bg-white flex flex-col md:flex-row px-8 py-10 gap-8'>
+            <div className='w-[90vw] rounded-4xl h-auto bg-white flex flex-col md:flex-row px-8 py-10 gap-8 relative overflow-hidden'>
+              <InteractiveBackground>
+                <div className='flex flex-col md:flex-row gap-8 w-full h-full relative'>
                 {/* Left: Showreel Card */}
                 <div className='w-full md:w-1/2 flex flex-col justify-start gap-3'>
                     <div className='flex items-center gap-5 font-medium text-xl'>
@@ -197,6 +205,8 @@ const HeroSection = () => {
                         </div>
                     </div>
                 </div>
+                </div>
+              </InteractiveBackground>
             </div>
 
 
@@ -215,7 +225,9 @@ const HeroSection = () => {
             </div>
 
 
-            <div className='w-[90vw] rounded-4xl h-auto bg-white flex flex-col items-center'>
+            <div className='w-[90vw] rounded-4xl h-auto bg-white flex flex-col items-center relative overflow-hidden'>
+              <InteractiveBackground>
+                <div className='flex flex-col items-center w-full h-full relative'>
 
                 {/* Box 1 */}
 
@@ -362,6 +374,8 @@ const HeroSection = () => {
                     </div>
                 </div>
 
+                </div>
+              </InteractiveBackground>
             </div>
 
         </div>

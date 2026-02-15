@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import InteractiveBackground from './ui/InteractiveBackground';
 
 const services = [
     { id: '01', name: 'Smart Course Search' },
@@ -14,8 +15,9 @@ const services = [
 const ServicesSection = () => {
     return (
         <section id="about" className="w-full py-20 flex flex-col items-center">
-            <div className="w-[90vw] bg-white rounded-[40px] p-8 md:p-16 shadow-sm border border-gray-100">
-
+            <div className="w-[90vw] bg-white rounded-[40px] shadow-sm border border-gray-100 relative overflow-hidden">
+              <InteractiveBackground>
+                <div className="p-8 md:p-16">
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
                     <div className="flex items-center gap-3 text-sm font-medium text-gray-900">
@@ -60,6 +62,8 @@ const ServicesSection = () => {
                     {/* Bottom border for the last item */}
                     <div className="border-t border-gray-100" />
                 </div>
+              </div>
+              </InteractiveBackground>
             </div>
         </section>
     );

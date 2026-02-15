@@ -1,13 +1,16 @@
 'use client'
 import React, { useState } from 'react'
 import { Check } from 'lucide-react'
+import InteractiveBackground from './ui/InteractiveBackground'
 
 const Pricing = () => {
     const [isAnnual, setIsAnnual] = useState(true);
 
     return (
         <div id="pricing" className='w-full flex justify-center pb-20'>
-            <div className='w-[90vw]  bg-white rounded-4xl py-16 flex flex-col items-center gap-12 overflow-hidden'>
+            <div className='w-[90vw] bg-white rounded-4xl relative overflow-hidden'>
+                <InteractiveBackground>
+                    <div className='py-16 flex flex-col items-center gap-12'>
 
                 {/* Header */}
                 <div className='flex flex-col items-center text-center gap-4'>
@@ -157,6 +160,8 @@ const Pricing = () => {
                     </div>
 
                 </div>
+                  </div>
+                </InteractiveBackground>
             </div>
         </div>
     )
