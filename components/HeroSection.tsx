@@ -1,5 +1,4 @@
 'use client'
-import Navbar from './Navbar'
 import Image from 'next/image'
 import Marquee from './Marquee'
 import Logo from '../public/Logo.png'
@@ -40,9 +39,7 @@ const HeroSection = () => {
                 }}
                 className='flex flex-col xl:justify-evenly justify-between items-center bg-white relative overflow-hidden'
             >
-                <div className='w-full'>
-                    <Navbar />
-                </div>
+                <div className='w-full h-22 invisible lg:block'></div>
 
                 <div className='flex flex-col md:flex-row items-center justify-center gap-10 px-8 md:px-20 w-full flex-1 max-w-[2000px] mx-auto'>
 

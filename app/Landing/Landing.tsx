@@ -1,8 +1,6 @@
 'use client'
 import HeroSection from '@/components/HeroSection'
-import Navbar from '@/components/Navbar'
-import React, { useState } from 'react'
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import React from 'react'
 import FallingBoxes from '@/components/FallingBoxes'
 import ServicesSection from '@/components/ServiceSection'
 import TestimonialSection from '@/components/TestimonialSection'
@@ -11,32 +9,8 @@ import Footer from '@/components/Footer'
 
 
 const Landing = () => {
-  const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
-    // Hide navbar if scrolling down and past 150px
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
-
   return (
     <div className='bg-[#e5e9eb]'>
-      <motion.div
-        variants={{
-          visible: { y: 0 },
-          hidden: { y: "-100%" },
-        }}
-        animate={hidden ? "hidden" : "visible"}
-        transition={{ duration: 0.55, ease: "easeInOut" }}
-        className='fixed top-0 w-full bg-white rounded-b-2xl h-22 z-50'
-      >
-        <Navbar />
-      </motion.div>
       <HeroSection />
       <ServicesSection />
       <FallingBoxes />

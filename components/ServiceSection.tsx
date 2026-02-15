@@ -13,7 +13,7 @@ const services = [
 
 const ServicesSection = () => {
     return (
-        <section className="w-full py-20 flex flex-col items-center">
+        <section id="about" className="w-full py-20 flex flex-col items-center">
             <div className="w-[90vw] bg-white rounded-[40px] p-8 md:p-16 shadow-sm border border-gray-100">
 
                 {/* Header Section */}
