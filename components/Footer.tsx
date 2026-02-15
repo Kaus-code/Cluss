@@ -16,11 +16,11 @@ const Footer = () => {
     ];
 
     const servicesLinks = [
-        'Web Design', 'Branding', 'UX/UI', 'Motion', 'SEO', 'Content Creation', 'Landing Page', 'Webflow Dev'
+        'AI Study Planner', 'YouTube Q&A', 'Deep Topic Search', 'Instant PDF Notes', 'AI Quiz Generator', 'RAG Study Rooms', 'Progress Tracking', 'Gamification'
     ];
 
     const industriesLinks = [
-        'Healthcare', 'Fintech', 'Web3', 'Technology', 'Corporate', 'AI', 'Real Estate', 'E-commerce', 'FMCG', 'Hospitality'
+        'K-12 Education', 'Higher Education', 'Coding Bootcamps', 'Language Learning', 'Test Prep', 'Corporate Training', 'Self-taught Devs', 'Skill Building'
     ];
 
     const socialLinks = [

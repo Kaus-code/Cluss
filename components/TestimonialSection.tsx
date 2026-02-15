@@ -7,37 +7,37 @@ import Image from 'next/image';
 const testimonials = [
     {
         id: 1,
-        text: "Eloqwnt delivered the project ahead of schedule and met the client's expectations. The team communicated clearly and promptly, collaborated well, and provided excellent design input. Moreover, they were results-oriented and responsive to feedback.",
+        text: "Cluss transformed my messy YouTube favorites into a real computer science curriculum. The AI-generated study plan kept me on track for my full-stack finals without feeling overwhelmed.",
         name: "Sean Bockhold",
-        role: "Product Owner, Quantum Data Technologies Inc",
+        role: "Computer Science Student, Georgia Tech",
         avatar: "https://i.pravatar.cc/150?u=sean"
     },
     {
         id: 2,
-        text: "Eloqwnt's excellent designs received positive feedback and drew high foot traffic from walk-ins and influencers. The team was responsive and proactive, delivered on time, quickly adapted to feedback, and professionally managed the project.",
+        text: "The Deep Search feature is a game-changer. I can jump directly to the complex theory parts of a 3-hour tutorial instead of scrubbing through the whole video. It saves me hours every single week.",
         name: "Dani Lledo",
-        role: "Founder, Amor Fati Tattoo Studio",
+        role: "Self-taught Developer & UI/UX Expert",
         avatar: "https://i.pravatar.cc/150?u=dani"
     },
     {
         id: 3,
-        text: "Eloqwnt delivered beyond expectations—on time, on budget, and with exceptional quality. Their responsiveness made every update effortless, and their attention to detail set them apart. A top-tier team we'd highly recommend.",
+        text: "As an educator, I recommend Cluss to all my students. The AI Quiz generator helps them verify their knowledge immediately after watching a lecture, turning passive watching into active learning.",
         name: "Nick Geeza",
-        role: "CFO, Hennessy Capital",
+        role: "High School Mathematics Educator",
         avatar: "https://i.pravatar.cc/150?u=nick"
     },
     {
         id: 4,
-        text: "Working with them was a seamless experience. The final product exceeded my confidence in our branding and set us on a path to success. Truly exceptional work from start to finish.",
+        text: "The credit system is very fair. I use my daily free credits for quick Q&A on tutorials, and the Pro plan is perfect for my intensive deep-dives where I need to roll over unused credits.",
         name: "Sarah Miller",
-        role: "Marketing Director, TechBridge",
+        role: "Lifelong Learner & Technical Writer",
         avatar: "https://i.pravatar.cc/150?u=sarah"
     },
     {
         id: 5,
-        text: "Their ability to translate complex requirements into intuitive designs is unmatched. We saw an immediate improvement in user engagement after the launch. Efficient, creative, and professional.",
+        text: "I used to get distracted by YouTube's feed. With Cluss, I just paste the link and stay focused in my dedicated study room. The GitHub-style heatmap is a huge motivator for my daily streaks.",
         name: "Alex Reed",
-        role: "CEO, InnovateNow",
+        role: "Bootcamp Graduate & Software Engineer",
         avatar: "https://i.pravatar.cc/150?u=alex"
     }
 ];
