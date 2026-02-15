@@ -1,6 +1,7 @@
 import { ArrowDown } from 'lucide-react'
 import React from 'react'
 import GeometricBackground from '@/components/ui/GeometricBackground'
+import StackingCards from '@/components/StackingCards';
 
 const explore = () => {
     return (
@@ -31,6 +32,7 @@ const explore = () => {
             </div>
             </div>
         </GeometricBackground>
+        <StackingCards/>
     )
 }
 
