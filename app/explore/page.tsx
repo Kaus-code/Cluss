@@ -5,6 +5,7 @@ import StackingCards from '@/components/StackingCards';
 
 const explore = () => {
     return (
+        <>
         <GeometricBackground>
             <div className='min-h-screen flex flex-col items-center justify-between pt-32 pb-10'>
                 <div className='flex-1 flex flex-col items-center justify-center gap-8 px-4 text-center max-w-5xl mx-auto'>
@@ -33,6 +34,7 @@ const explore = () => {
             </div>
         </GeometricBackground>
         <StackingCards/>
+        </>
     )
 }
 

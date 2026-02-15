@@ -1,44 +1,52 @@
 'use client';
 import { useTransform, motion, useScroll, MotionValue } from 'motion/react';
 import { useRef } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Logo from '../public/Logo.png';
+import Img1 from '../public/Img1.png';
+import Img2 from '../public/Img2.png';
 
 const projects = [
     {
-        title: 'AI-Powered Study Plans',
-        description:
-            'Our intelligent engine analyzes your learning goals, available time, and knowledge gaps to generate a fully personalized study roadmap — so you always know what to do next.',
-        link: 'https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop',
-        color: '#e5e9eb',
+        title: 'Creative Content',
+        description: 'In a world where attention is fleeting, we craft content that stops the scroll, sparks curiosity, and drives action.',
+        services: [
+            'Motion Design',
+            'Social Media Assets',
+            'Showreel Creation',
+            'Copywriting',
+            'Short 3D product reels',
+            'CGI & VFX - coming soon'
+        ],
+        link: Img1,
+        color: '#ffffff',
     },
     {
-        title: 'Deep Search Video',
-        description:
-            'Go beyond surface-level content. Our deep search dives into YouTube lectures, finds the exact timestamps, and surfaces the knowledge you need — instantly and accurately.',
-        link: 'https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60',
-        color: '#d4dce0',
+        title: 'Development',
+        description: 'From MVP to Series A platform, we build the technical foundation that grows with your startup.',
+        services: [
+            'Webflow Development',
+            'Creative Development',
+            'Native Web Dev',
+            'Framer',
+            'Wordpress'
+        ],
+        link: Img2,
+        color: '#ffffff',
     },
     {
-        title: 'Smart Summarization',
-        description:
-            'Turn hours of video into minutes of reading. Our AI condenses entire playlists and lectures into crisp, well-structured notes you can review anytime.',
-        link: 'https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop',
-        color: '#c3cdd3',
-    },
-    {
-        title: 'Collaborative Study Rooms',
-        description:
-            'Learn together in real-time. Create or join virtual study rooms where peers share notes, discuss concepts, and push each other toward mastery.',
-        link: 'https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60',
-        color: '#b2bfc6',
-    },
-    {
-        title: 'Interactive AI Tutor',
-        description:
-            'Ask questions, get explanations, and explore topics in-depth with your personal AI tutor. It adapts to your level and learning style in real-time.',
-        link: 'https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop',
-        color: '#a1b1b9',
+        title: 'Strategic Marketing',
+        description: 'In a world where attention is fleeting, we craft content that stops the scroll, sparks curiosity, and drives action.',
+        services: [
+            'Brand Strategy',
+            'Market Analysis',
+            'Campaign Planning',
+            'SEO Optimization',
+            'Performance Marketing',
+            'Analytics - coming soon'
+        ],
+        link: Img1,
+        color: '#ffffff',
     },
 ];
 
@@ -46,93 +54,100 @@ interface CardProps {
     i: number;
     title: string;
     description: string;
-    url: string;
+    services: string[];
+    link: StaticImageData;
     color: string;
     progress: MotionValue<number>;
     range: [number, number];
     targetScale: number;
 }
 
-const Card: React.FC<CardProps> = ({
-    i,
-    title,
-    description,
-    url,
-    color,
-    progress,
-    range,
-    targetScale,
-}) => {
+const Card: React.FC<CardProps> = ({ i, title, description, services, link, color, progress, range, targetScale }) => {
     const container = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ['start end', 'start start'],
-    });
 
-    const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+    // Animation Logic
     const scale = useTransform(progress, range, [1, targetScale]);
+    const blur = useTransform(progress, range, [0, 25]);
 
     return (
-        <div
-            ref={container}
-            className="h-screen flex items-center justify-center sticky top-0"
-        >
+        <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
             <motion.div
                 style={{
-                    backgroundColor: color,
                     scale,
-                    top: `calc(-5vh + ${i * 25}px)`,
+                    filter: `blur(${blur}px)`,
+                    backgroundColor: color,
                 }}
-                className="flex flex-col relative -top-[25%] h-[500px] w-[90%] max-w-[1100px] rounded-[40px] p-8 md:p-12 origin-top"
+                // Height set to 750px to fit content comfortably.
+                // Added overflow-hidden to clip corners perfectly.
+                className="relative w-[95vw] max-w-[1200px] h-[750px] rounded-[48px] p-10 md:p-14 bg-white shadow-sm border border-gray-100 flex flex-col md:flex-row gap-10 overflow-hidden transform-gpu"
             >
-                {/* Card Header */}
-                <div className="flex items-center gap-3 mb-6">
-                    <div className="dot"></div>
-                    <span className="text-sm font-medium text-gray-900">
-                        {String(i + 1).padStart(2, '0')}
-                    </span>
-                </div>
+                {/* Left Content Section */}
+                <div className="w-full md:w-[45%] flex flex-col justify-between h-full relative z-20">
+                    {/* Top Content Group */}
+                    <div>
+                        {/* Title: Adjusted size for better wrapping */}
+                        <h2 className="text-4xl md:text-[56px] font-semibold text-gray-900 mb-6 tracking-tight leading-[1.05]">
+                            {title}
+                        </h2>
 
-                <div className="flex flex-col md:flex-row h-full gap-8 md:gap-12">
-                    {/* Left Content */}
-                    <div className="w-full md:w-[40%] flex flex-col justify-between">
+                        {/* Description */}
+                        <p className="text-[17px] text-gray-600 leading-relaxed mb-8 max-w-[420px]">
+                            {description}
+                        </p>
+
+                        {/* Services List */}
                         <div>
-                            <h2 className="text-2xl md:text-3xl font-medium text-gray-900 tracking-tight leading-tight mb-4">
-                                {title}
-                            </h2>
-                            <p className="text-[15px] text-gray-600 leading-relaxed">
-                                {description}
-                            </p>
-                        </div>
+                            <span className="text-[15px] font-bold text-gray-900 block mb-4">
+                                Services:
+                            </span>
+                            <ul className="flex flex-col gap-2">
+                                {services.map((service, idx) => {
+                                    const isComingSoon = service.includes('coming soon');
+                                    const parts = service.split('-');
+                                    const mainText = parts[0].trim();
 
-                        {/* CTA Button - Cluss style */}
-                        <div className="mt-6">
-                            <div className="group relative cursor-pointer w-fit px-6 py-3 bg-black text-white flex gap-2 rounded-full overflow-hidden">
-                                <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
-                                <div className="relative z-10 flex gap-2 group-hover:text-black transition-colors duration-500 items-center">
-                                    <span>See more</span>
-                                    <div className="group-hover:-rotate-45 transition-transform duration-500">
-                                        <Image src={Logo} alt="Logo" width={18} height={18} />
-                                    </div>
-                                </div>
+                                    return (
+                                        <li key={idx} className="text-[18px] text-gray-800 font-medium tracking-tight flex items-center">
+                                            {mainText}
+                                            {isComingSoon && (
+                                                <span className="ml-2 text-gray-300 font-light italic text-[16px]">
+                                                    - coming soon
+                                                </span>
+                                            )}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Button Group - Pinned to bottom via flex justify-between */}
+                    <div className="group relative cursor-pointer w-fit px-8 py-3 bg-[#f0f2f5] rounded-full overflow-hidden flex items-center gap-2 mt-auto md:mt-0">
+                        <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+                        <div className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
+                            <span className="font-medium text-[15px]">More Info</span>
+                            <div className="w-4 h-4 relative group-hover:-rotate-12 transition-transform duration-500">
+                                <Image
+                                    src={Logo}
+                                    alt="arrow"
+                                    fill
+                                    className="object-contain opacity-60 group-hover:opacity-100 group-hover:invert transition-all"
+                                />
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    {/* Right Image */}
-                    <div className="relative w-full md:w-[60%] h-48 md:h-full rounded-2xl overflow-hidden">
-                        <motion.div
-                            className="w-full h-full"
-                            style={{ scale: imageScale }}
-                        >
-                            <Image
-                                fill
-                                src={url}
-                                alt={title}
-                                className="object-cover"
-                            />
-                        </motion.div>
-                    </div>
+                {/* Right Image Section */}
+                <div className="hidden md:block w-full md:w-[55%] h-full relative rounded-[32px] overflow-hidden">
+                    <Image
+                        fill
+                        src={link}
+                        alt={title}
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={i === 0}
+                    />
                 </div>
             </motion.div>
         </div>
@@ -147,37 +162,24 @@ const StackingCards = () => {
     });
 
     return (
-        <section ref={container} className="w-full">
-            {/* Header */}
-            <div className="w-[90vw] mx-auto flex flex-col md:flex-row justify-between items-start gap-4 pt-20 pb-10 px-2 md:px-0">
-                <div className="flex items-center gap-3 text-sm font-medium text-gray-900">
-                    <div className="dot"></div>
-                    Featured Works
-                </div>
-                <h2 className="text-2xl md:text-4xl font-medium max-w-xl leading-tight text-gray-900">
-                    We create a path for learning but you have to walk by yourself
-                </h2>
-            </div>
+        <section ref={container} className="mt-[10vh] mb-[10vh] bg-[#e5e9eb] py-10 rounded-t-[48px]">
+            {projects.map((project, i) => {
+                const rangeStart = i * (1 / projects.length);
+                const rangeEnd = rangeStart + (1 / projects.length);
 
-            {/* Stacking Cards */}
-            <div>
-                {projects.map((project, i) => {
-                    const targetScale = 1 - (projects.length - i) * 0.05;
-                    return (
-                        <Card
-                            key={`p_${i}`}
-                            i={i}
-                            url={project.link}
-                            title={project.title}
-                            color={project.color}
-                            description={project.description}
-                            progress={scrollYProgress}
-                            range={[i * 0.25, 1]}
-                            targetScale={targetScale}
-                        />
-                    );
-                })}
-            </div>
+                const targetScale = 1 - ((projects.length - i) * 0.05);
+
+                return (
+                    <Card
+                        key={`p_${i}`}
+                        i={i}
+                        {...project}
+                        progress={scrollYProgress}
+                        range={[rangeStart, rangeEnd]}
+                        targetScale={targetScale}
+                    />
+                );
+            })}
         </section>
     );
 };
